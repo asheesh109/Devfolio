@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Filter from "bad-words";
 import toast, { Toaster } from "react-hot-toast";
-import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import mail from "./mailer";
@@ -64,14 +64,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { name, email, message } = formData;
 
-    const { name, email, message } = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    if (name === "" || email === "" || message === "") {
+    if (!name || !email || !message) {
       empty();
       return setMailerResponse("empty");
     }
@@ -254,9 +249,8 @@ const Contact = () => {
       id={MENULINKS[4].ref}
       className="mt-30 w-full relative select-none bg-black pt-20 sm:pt-10 md:pt-5 lg:pt-1 pb-20"
     >
-      <div>
-        <Toaster toastOptions={toastOptions} />
-      </div>
+      <Toaster toastOptions={toastOptions} />
+
       <div className="section-container flex flex-col justify-center">
         <div className="flex flex-col contact-wrapper">
           <div className="flex flex-col">
@@ -268,12 +262,18 @@ const Contact = () => {
             </h1>
           </div>
           <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 staggered-reveal">
-            Get In Touch.{" "}
+            Get In Touch.
           </h2>
         </div>
 
+        {/* ✔ Replaced Fade with Framer Motion */}
         <form className="pt-10 sm:mx-auto sm:w-[30rem] md:w-[35rem] staggered-reveal">
-          <Fade bottom distance={"4rem"}>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <div className="relative">
               <input
                 type="text"
@@ -323,7 +323,7 @@ const Contact = () => {
                 Message
               </label>
             </div>
-          </Fade>
+          </motion.div>
 
           {mailerResponse !== "not initiated" &&
             (mailerResponse === "success" ? (
@@ -332,17 +332,12 @@ const Contact = () => {
               <div className="hidden">{error()}</div>
             ))}
         </form>
+
         <div className="mt-9 mx-auto link">
           <button
             ref={buttonElementRef}
             className={styles.button}
-            disabled={
-              formData.name === "" ||
-              formData.email === "" ||
-              formData.message === ""
-                ? true
-                : false
-            }
+            disabled={!formData.name || !formData.email || !formData.message}
             onClick={handleSubmit}
           >
             <span>Send -&gt;</span>
@@ -352,10 +347,12 @@ const Contact = () => {
               </svg>
               Sent
             </span>
+
             <svg className={styles.trails} viewBox="0 0 33 64">
               <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
               <path d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"></path>
             </svg>
+
             <div className={styles.plane}>
               <div className={styles.left} />
               <div className={styles.right} />
@@ -363,6 +360,7 @@ const Contact = () => {
           </button>
         </div>
       </div>
+
       <style jsx global>{`
         input,
         label,
