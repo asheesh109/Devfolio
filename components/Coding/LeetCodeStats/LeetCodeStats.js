@@ -66,7 +66,10 @@ const LeetCodeStats = ({ username }) => {
             Unable to fetch LeetCode stats
           </div>
           <div className="text-gray-500 text-xs">
-            {`Please check if the username "${username}" exists on LeetCode`}
+            <p>
+  Please check if the username &quot;{username}&quot; exists on LeetCode
+</p>
+
 
           </div>
         </div>
