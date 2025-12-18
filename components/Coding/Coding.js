@@ -56,7 +56,7 @@ const Coding = ({ isDesktop }) => {
             My Stats
           </h1>
           <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 staggered-reveal">
-            A glimpse of my coding journey and achievements.
+            A snapshot of my coding journey and key achievements.
           </h2>
 
           {/* GitHub Section */}
