@@ -39,6 +39,10 @@ export const MENULINKS = [
     ref: "work",
   },
   {
+    name: "Coding Profiles",
+    ref: "coding",
+  },
+  {
     name: "Contact",
     ref: "contact",
   },
@@ -226,7 +230,7 @@ export const WORK_CONTENTS = {
     {
       title: "Infosys Springboard",
       description:
-        "Infosys Springboard is a global learning and development platform enabling students and developers to master software engineering, cloud, and enterprise technologies through hands on modules.",
+        "Infosys Springboard is a global learning and development platform designed to train students and professionals in software engineering, cloud computing, and enterprise technologies through industry-aligned programs.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
           Full Stack Developer Intern
@@ -234,22 +238,22 @@ export const WORK_CONTENTS = {
       ),
     },
     {
-      title: "Engineering",
+      title: "Engineering Work",
       description:
-        "Built full stack features using React.js and Spring Boot REST APIs. Improved backend logic, optimized SQL queries, and ensured delivery of stable, high performance modules.",
+        "Developed full stack features using React.js and Spring Boot REST APIs. Enhanced backend business logic, optimized SQL queries, and ensured reliable integration between frontend and backend systems.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          React × Spring Boot Integrations
+          React × Spring Boot Development
         </div>
       ),
     },
     {
       title: "Impact",
       description:
-        "Enhanced backend response times, fixed UI inconsistencies, collaborated in Agile teams, and contributed to enterprise level development workflows and best practices.",
+        "Improved application performance, resolved UI inconsistencies, collaborated in Agile teams, and followed enterprise-grade development workflows, code reviews, and best practices.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Enterprise Development Experience
+          Enterprise Software Experience
         </div>
       ),
     },
@@ -259,7 +263,7 @@ export const WORK_CONTENTS = {
     {
       title: "VOIS (Vodafone Intelligent Solutions)",
       description:
-        "VOIS is Vodafone’s global innovation hub powering automation, data intelligence, and digital solutions across the enterprise.",
+        "VOIS is Vodafone’s global capability center driving data analytics, automation, and digital transformation initiatives across international markets.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
           Data Analytics Intern
@@ -267,12 +271,22 @@ export const WORK_CONTENTS = {
       ),
     },
     {
-      title: "Analytics",
+      title: "Data Engineering",
       description:
-        "Developed Python and SQL driven data analysis workflows. Built lightweight ETL pipelines, automated validation checks, and enhanced data quality for business insights.",
+        "Built Python and SQL-based data analysis workflows, developed lightweight ETL pipelines, and automated data validation processes to support analytics and reporting systems.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
           Python & SQL Pipelines
+        </div>
+      ),
+    },
+    {
+      title: "Impact",
+      description:
+        "Enhanced data accuracy and consistency, reduced manual validation efforts, and collaborated with cross-functional teams to improve the reliability of business insights.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white px-4">
+          Data Quality & Reliability
         </div>
       ),
     },
@@ -282,20 +296,30 @@ export const WORK_CONTENTS = {
     {
       title: "Google Developer Student Club",
       description:
-        "GDSC is a global developer community supported by Google, enabling students to learn new technologies through real world projects and workshops.",
+        "Google Developer Student Clubs (GDSC) are Google-backed communities that help students gain practical experience through hands-on projects, workshops, and peer learning.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Core Tech Member
+          Core Technical Member
         </div>
       ),
     },
     {
-      title: "Leadership",
+      title: "Technical Leadership",
       description:
-        "Conducted Web Development and AI workshops for 200+ students, mentored juniors, and contributed to the technical backbone of multiple GDSC projects.",
+        "Organized and conducted Web Development and AI workshops for 200+ students, mentored juniors, and actively contributed to multiple technical initiatives and projects.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
           Web & AI Workshops
+        </div>
+      ),
+    },
+    {
+      title: "Impact",
+      description:
+        "Strengthened the club’s technical ecosystem, improved student engagement, and helped build a collaborative learning culture focused on real-world engineering skills.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white px-4">
+          Community & Skill Building
         </div>
       ),
     },
@@ -305,7 +329,7 @@ export const WORK_CONTENTS = {
     {
       title: "Sapphire Infocam Pvt. Ltd.",
       description:
-        "Sapphire Infocam builds enterprise software and digital solutions for businesses across multiple domains using modern engineering stacks.",
+        "Sapphire Infocam develops enterprise-grade software solutions and digital platforms for businesses using modern full stack technologies.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
           Full Stack Developer Intern
@@ -313,22 +337,22 @@ export const WORK_CONTENTS = {
       ),
     },
     {
-      title: "Development",
+      title: "Full Stack Development",
       description:
-        "Developed full stack modules using the MERN stack. Built reusable React components, integrated APIs, fixed bugs, and improved UI responsiveness across the platform.",
+        "Developed full stack modules using the MERN stack, built reusable React components, integrated REST APIs, fixed bugs, and improved overall UI responsiveness.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          MERN Stack Development
+          MERN Stack Engineering
         </div>
       ),
     },
     {
       title: "Impact",
       description:
-        "Delivered pixel perfect UI in collaboration with designers, optimized frontend performance, and built stable backend services directly improving product quality and user experience.",
+        "Delivered pixel-perfect UI in collaboration with designers, optimized frontend performance, and built stable backend services that directly improved product quality and user experience.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Production Ready Engineering
+          Production-Ready Systems
         </div>
       ),
     },
@@ -336,22 +360,32 @@ export const WORK_CONTENTS = {
 
   AVALON: [
     {
-      title: "Avalon",
+      title: "Avalon TechFest",
       description:
-        "Worked as a contributor for Avalon's official website, improving UI, fixing bugs, and enhancing user experience for over 1000+ students who registered for various tech events.",
+        "Contributed to the official website of Avalon TechFest, supporting registrations and event information for 1000+ students across multiple technical events.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          React × Framer Motion Development
+          Frontend Developer
         </div>
       ),
     },
     {
       title: "Frontend Engineering",
       description:
-        "Developed animations, transitions, and interactive UI components using React.js and Framer Motion, ensuring a high-quality modern web experience.",
+        "Developed interactive UI components, animations, and transitions using React.js and Framer Motion to deliver a modern and engaging user experience.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          UI/UX + Motion Engineering
+          React × Framer Motion
+        </div>
+      ),
+    },
+    {
+      title: "Impact",
+      description:
+        "Improved website usability, reduced UI bugs, and enhanced overall user engagement during high-traffic event registration periods.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white px-4">
+          High-Traffic UI Optimization
         </div>
       ),
     },
@@ -359,22 +393,32 @@ export const WORK_CONTENTS = {
 
   ECELL: [
     {
-      title: "ECell",
+      title: "E-Cell (Entrepreneurship Cell)",
       description:
-        "Served as a Webmaster in the E-Cell of TEC, maintaining and updating the official website and ensuring seamless event visibility and registrations.",
+        "Served as Webmaster for the Entrepreneurship Cell, managing and maintaining the official website to support events, initiatives, and registrations.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          Webmaster - React Developer
+          Webmaster & React Developer
         </div>
       ),
     },
     {
-      title: "Development",
+      title: "Web Development",
       description:
-        "Worked on several UI upgrades, added new event pages, improved website performance, and implemented interactive components using React.js & JavaScript.",
+        "Implemented UI upgrades, developed new event pages, improved website performance, and built interactive components using React.js and JavaScript.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white px-4">
-          React × JavaScript Engineering
+          React × JavaScript Development
+        </div>
+      ),
+    },
+    {
+      title: "Impact",
+      description:
+        "Enhanced website stability and performance, ensured smooth event visibility, and supported seamless registrations for multiple college-wide initiatives.",
+      content: (
+        <div className="h-full w-full flex items-center justify-center text-white px-4">
+          Scalable Event Platform
         </div>
       ),
     },
