@@ -61,7 +61,7 @@ const About1 = ({ clientHeight }) => {
           </span>
           <br/>
           <span className="about-2 leading-tight">
-             I take pride in crafting clean architectures and delivering smooth, thoughtful user experiences from end to end.{" "}
+            I specialize in building clean, scalable architectures and creating seamless, intuitive user experiences from start to finish.{" "}
           </span>
         </h1>
       </div>
