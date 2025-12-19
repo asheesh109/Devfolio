@@ -4,7 +4,6 @@ import { MENULINKS } from "../../../constants";
 const Menu = () => {
   useEffect(() => {
     const anchorNodes = document.querySelectorAll('a[href^="#"]');
-
     anchorNodes.forEach((el) => {
       el.addEventListener("click", () => {
         const checkbox = document.querySelector(".checkbox-toggle");
