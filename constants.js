@@ -226,6 +226,88 @@ export const PROJECTS = [
 
 
 export const WORK_CONTENTS = {
+
+  CACTUS: [
+{
+title: "Cactus Communications",
+description:
+"Cactus Communications is a global technology and scientific communications company serving researchers, publishers, and enterprises worldwide through AI-powered platforms and digital products.",
+content: ( <div className="h-full w-full flex items-center justify-center text-white px-4">
+Software Developer Intern </div>
+),
+},
+{
+title: "Platform Engineering",
+description:
+"Contributed to the development of a centralized authentication and identity management system integrated across multiple Cactus products used by millions of users globally. Worked on secure authentication workflows, backend integrations, and scalable enterprise-grade solutions.",
+content: ( <div className="h-full w-full flex items-center justify-center text-white px-4">
+Centralized Authentication System </div>
+),
+},
+{
+title: "Global Impact",
+description:
+"Collaborated with cross-functional teams and stakeholders across India, Japan, South Korea, China, and the United States. Contributed to systems supporting large-scale global platforms while following industry best practices for software development, security, and reliability.",
+content: ( <div className="h-full w-full flex items-center justify-center text-white px-4">
+Global Enterprise Collaboration </div>
+),
+},
+],
+
+MICROSOFT: [
+{
+title: "Microsoft Learn Student Ambassadors",
+description:
+"The Microsoft Learn Student Ambassadors program empowers students worldwide to build technical expertise, strengthen leadership skills, and foster technology communities on their campuses and beyond.",
+content: ( <div className="h-full w-full flex items-center justify-center text-white px-4">
+Student Ambassador </div>
+),
+},
+{
+title: "Community Leadership",
+description:
+"Organized technical workshops, promoted cloud and AI learning initiatives, guided students in their technology journeys, and helped connect aspiring developers with Microsoft technologies and learning resources.",
+content: ( <div className="h-full w-full flex items-center justify-center text-white px-4">
+Developer Community Building </div>
+),
+},
+{
+title: "Impact",
+description:
+"Enabled peer-to-peer learning, encouraged student participation in technical events and hackathons, and contributed to building a stronger technology ecosystem through mentorship and knowledge sharing.",
+content: ( <div className="h-full w-full flex items-center justify-center text-white px-4">
+Leadership & Mentorship </div>
+),
+},
+],
+
+GSSOC: [
+{
+title: "GirlScript Summer of Code",
+description:
+"GirlScript Summer of Code (GSSoC) is one of India's largest open-source programs, connecting contributors and maintainers to collaborate on impactful real-world projects.",
+content: ( <div className="h-full w-full flex items-center justify-center text-white px-4">
+Project Admin & Mentor </div>
+),
+},
+{
+title: "Open Source Leadership",
+description:
+"Managed project contributions, reviewed pull requests, mentored open-source contributors, resolved technical issues, and guided participants through development workflows and best practices.",
+content: ( <div className="h-full w-full flex items-center justify-center text-white px-4">
+Project Management & Mentorship </div>
+),
+},
+{
+title: "Impact",
+description:
+"Helped contributors successfully complete open-source contributions, maintained project quality standards, fostered collaboration within the community, and supported developers in strengthening their software engineering skills.",
+content: ( <div className="h-full w-full flex items-center justify-center text-white px-4">
+Open Source Community Growth </div>
+),
+},
+],
+
   INFOSYS: [
     {
       title: "Infosys Springboard",

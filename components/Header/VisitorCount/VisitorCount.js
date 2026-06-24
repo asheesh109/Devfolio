@@ -11,12 +11,22 @@ const VisitorCount = () => {
     const options = visited ? {} : { method: "POST" };
 
     fetch(url, options)
-      .then((res) => res.json())
-      .then((data) => {
-        setCount(data.count);
-        sessionStorage.setItem("visited", "true");
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`API error: ${res.status}`);
+        }
+        return res.json();
       })
-      .catch(console.error);
+      .then((data) => {
+        if (data.count !== undefined) {
+          setCount(data.count);
+          sessionStorage.setItem("visited", "true");
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to fetch visitor count:", error);
+        setCount(0); // Fallback to 0 instead of showing loading state
+      });
   }, []);
 
   return (

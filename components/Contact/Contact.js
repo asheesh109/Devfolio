@@ -246,7 +246,7 @@ const Contact = () => {
   return (
     <section
       ref={sectionRef}
-      id={MENULINKS[4].ref}
+      id={MENULINKS[5].ref}
       className="mt-30 w-full relative select-none bg-black pt-20 sm:pt-10 md:pt-5 lg:pt-1 pb-20"
     >
       <Toaster toastOptions={toastOptions} />
@@ -258,7 +258,7 @@ const Contact = () => {
               CONTACT
             </p>
             <h1 className="text-6xl mt-2 font-medium text-gradient w-fit staggered-reveal">
-              Contact
+              Let's Connect.
             </h1>
           </div>
           <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 staggered-reveal">

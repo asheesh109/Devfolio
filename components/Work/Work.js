@@ -206,6 +206,28 @@ const Work = ({ isDesktop }) => {
   const sectionRef = useRef(null);
 
   const workExperiences = [
+
+    {
+      company: "Microsoft",
+      logo: "/microsoft.webp",
+      role: "Student Advocate",
+      value: "microsoft",
+      content: WORK_CONTENTS.MICROSOFT,
+    },
+    {
+      company: "GSSOC",
+      logo: "/gssoc.png",
+      role: "Project Admin & Mentor",
+      value: "gssoc",
+      content: WORK_CONTENTS.GSSOC,
+    },
+    {
+      company: "Cactus Communications",
+      logo: "/cactus.jpeg",
+      role: "Software Engineer Intern",
+      value: "cactus",
+      content: WORK_CONTENTS.CACTUS,
+    },
     {
       company: "Infosys",
       logo: "/infosys.svg",

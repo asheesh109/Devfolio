@@ -10,15 +10,21 @@ const GitHubStats = ({ username }) => {
   useEffect(() => {
     const fetchGitHubStats = async () => {
       try {
-        const response = await fetch(`https://api.github.com/users/${username}`);
+        const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+        const headers = token ? { Authorization: `token ${token}` } : {};
+        
+        const response = await fetch(`https://api.github.com/users/${username}`, { headers });
         
         if (!response.ok) {
-          throw new Error('Failed to fetch user data');
+          if (response.status === 403) {
+            throw new Error('GitHub API rate limit exceeded. Please configure NEXT_PUBLIC_GITHUB_TOKEN.');
+          }
+          throw new Error(`GitHub API error: ${response.status}`);
         }
         
         const data = await response.json();
         
-        const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+        const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`, { headers });
         const repos = await reposResponse.json();
         
         const totalStars = repos.reduce((acc, repo) => acc + repo.stargazers_count, 0);
@@ -27,9 +33,10 @@ const GitHubStats = ({ username }) => {
         // Fetch languages for top 10 repos
         const languagePromises = repos.slice(0, 10).map(async (repo) => {
           try {
-            const langResponse = await fetch(repo.languages_url);
+            const langResponse = await fetch(repo.languages_url, { headers });
             return await langResponse.json();
-          } catch {
+          } catch (err) {
+            console.error(`Failed to fetch languages for ${repo.name}:`, err);
             return {};
           }
         });
