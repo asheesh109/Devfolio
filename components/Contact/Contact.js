@@ -258,7 +258,7 @@ const Contact = () => {
               CONTACT
             </p>
             <h1 className="text-6xl mt-2 font-medium text-gradient w-fit staggered-reveal">
-              Let's Connect.
+             Let&apos;s Connect.
             </h1>
           </div>
           <h2 className="text-[1.65rem] font-medium md:max-w-lg w-full mt-2 staggered-reveal">
