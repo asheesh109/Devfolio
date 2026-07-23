@@ -31,18 +31,14 @@ const VisitorCount = () => {
 
   return (
     <div className="flex items-center gap-2 text-white font-mono opacity-80">
-      {/* Icon */}
-      <Eye size={18} className="text-white/80" />
+     
 
       {/* Mobile */}
       <span className="md:hidden text-sm">
         {count ?? "..."}
       </span>
 
-      {/* Desktop */}
-      <span className="hidden md:inline text-sm">
-        Visitors: {count ?? "..."}
-      </span>
+      
     </div>
   );
 };
